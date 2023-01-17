@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { EntradaWebComponent } from './components/entrada-web/entrada-web.component';
+import { JuguetesComponent } from './components/juguetes/juguetes/juguetes.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: "portal", component: EntradaWebComponent },
+  { path: "tienda", loadChildren: () => import("./components/juguetes/juguetes.module").then(m => m.JuguetesModule) },
+  { path: "**", redirectTo: "portal", pathMatch: "full" },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
