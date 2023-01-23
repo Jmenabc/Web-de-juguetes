@@ -4,13 +4,12 @@
 
 export const environment = {
   firebase: {
-    projectId: 'mis-malditas-ventas',
-    appId: '1:441109775792:web:47151e26d7ff6a2ac4c275',
-    storageBucket: 'mis-malditas-ventas.appspot.com',
-    locationId: 'europe-west',
-    apiKey: 'AIzaSyBSunNCrPrxmxyoBRdUePHAj5g_Os0zvV0',
-    authDomain: 'mis-malditas-ventas.firebaseapp.com',
-    messagingSenderId: '441109775792',
+    projectId: 'jugueteria-cc0ed',
+    appId: '1:620626148457:web:4dc4ae8d04911944f5f6f8',
+    storageBucket: 'jugueteria-cc0ed.appspot.com',
+    apiKey: 'AIzaSyDlZuCCLOtPhKhvcqoGfkgFT_2fOa7JJLY',
+    authDomain: 'jugueteria-cc0ed.firebaseapp.com',
+    messagingSenderId: '620626148457',
   },
   production: false
 };
