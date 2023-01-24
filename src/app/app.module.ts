@@ -8,11 +8,15 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { EntradaWebComponent } from './components/entrada-web/entrada-web.component';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { DisplayMenuComponent } from './components/display-menu/display-menu.component';
+import { OpcionesCrudComponent } from './components/opciones-crud/opciones-crud.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntradaWebComponent
+    EntradaWebComponent,
+    DisplayMenuComponent,
+    OpcionesCrudComponent
   ],
   imports: [
     BrowserModule,

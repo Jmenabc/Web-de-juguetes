@@ -1,6 +1,6 @@
 export interface JUGUETES {
-  descripcion: string,
+  nif: string,
   nombre: string,
-  precio: string,
-  proveedor: string,
+  contacto: string,
+  direccion: string,
 }
