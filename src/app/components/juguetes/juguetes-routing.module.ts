@@ -8,7 +8,7 @@ import { VenderJuguetesComponent } from './vender-juguetes/vender-juguetes.compo
 const routes: Routes = [
   { path: "juguetes", component: JuguetesComponent },
   { path: "juguetes/añadir", component: AnadirJuguetesComponent },
-  { path: "juguetes/editar/:id", component: EditarJuguetesComponent },
+  { path: "juguetes/lista/editar/:id", component: EditarJuguetesComponent },
   { path: "juguetes/vender", component: VenderJuguetesComponent },
   { path: "**", redirectTo: "juguetes", pathMatch: "full" }
 ];

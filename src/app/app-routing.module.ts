@@ -5,7 +5,9 @@ import { JuguetesComponent } from './components/juguetes/juguetes/juguetes.compo
 
 const routes: Routes = [
   { path: "portal", component: EntradaWebComponent },
-  { path: "tienda", loadChildren: () => import("./components/juguetes/juguetes.module").then(m => m.JuguetesModule) },
+  //{ path: "tienda", loadChildren: () => import("./components/juguetes/juguetes.module").then(m => m.JuguetesModule) },
+  //{ path: "tienda", loadChildren: () => import("./components/clientes/clientes.module").then(m => m.ClientesModule) },
+  { path: "tienda", loadChildren: () => import("./components/proveedores/proveedores.module").then(m => m.ProveedoresModule) },
   { path: "**", redirectTo: "portal", pathMatch: "full" },
 ];
 

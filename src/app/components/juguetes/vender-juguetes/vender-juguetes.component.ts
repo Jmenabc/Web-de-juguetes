@@ -12,7 +12,7 @@ export class VenderJuguetesComponent {
   constructor(private firebase: JugueteriaService) { }
   //Requisitos para llamar a la coleccion y pasar los datos a la vista
   coleccion = "Juguetes";
-  juguetesLista: JUGUETES[] = [];
+  juguetesLista: any[] = [];
   documentId: string = '';
 
   getTodosLosJuguetes() {
