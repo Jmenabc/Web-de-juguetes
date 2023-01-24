@@ -3,6 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { JugueteriaService } from 'src/app/services/jugueteria.service';
 import { CLIENTE } from '../clientes';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-anadir-clientes',
@@ -13,7 +14,8 @@ export class AnadirClientesComponent {
 
   constructor(private fb: FormBuilder,
     private ruta: ActivatedRoute,
-    private firestore: JugueteriaService) { }
+    private firestore: JugueteriaService,
+    private _location: Location) { }
   //La coleccion donde vamos a añadir los juguetes
   coleccion = "Clientes";
   documentId: string = '';
@@ -29,5 +31,6 @@ export class AnadirClientesComponent {
 
   crearCliente() {
     this.firestore.Crear(this.coleccion, this.formClientes.value);
+    this._location.back();
   }
 }

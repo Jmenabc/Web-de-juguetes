@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { JugueteriaService } from 'src/app/services/jugueteria.service';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-editar-juguetes',
@@ -15,7 +16,7 @@ export class EditarJuguetesComponent {
   juguete: any;
 
   constructor(private firebase: JugueteriaService, private fb: FormBuilder,
-    private ruta: ActivatedRoute) { }
+    private ruta: ActivatedRoute, private _location: Location) { }
 
   formjuguetes = this.fb.group({
     nombre: [],
@@ -34,12 +35,13 @@ export class EditarJuguetesComponent {
   ActualizarDatos() {
     this.documentId = this.ruta.snapshot.paramMap.get('idJuguete')!;
     this.firebase.Actualizar(this.coleccion, this.documentId, this.formjuguetes.value)
-
+    this._location.back();
   }
 
   Eliminar() {
     this.documentId = this.ruta.snapshot.paramMap.get('idJuguete')!;
     this.firebase.Eliminar(this.coleccion, this.documentId);
+    this._location.back();
   }
 
   ngOnInit() {
