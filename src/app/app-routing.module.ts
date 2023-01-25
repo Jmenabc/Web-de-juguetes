@@ -8,6 +8,8 @@ import { MenuTiendaComponent } from './components/Tienda/menu-tienda/menu-tienda
 import { VentaAClientesComponent } from './components/Tienda/venta-a-clientes/venta-a-clientes.component';
 import { JugueteSeleccionadoComponent } from './components/Tienda/juguete-seleccionado/juguete-seleccionado.component';
 import { JugueteVendidoScreenComponent } from './components/Tienda/juguete-vendido-screen/juguete-vendido-screen.component';
+import { CompraProveedoresComponent } from './components/Tienda/compra-proveedores/compra-proveedores.component';
+import { JugueteAComprarComponent } from './components/Tienda/juguete-a-comprar/juguete-a-comprar.component';
 
 const routes: Routes = [
   { path: "portal", component: EntradaWebComponent },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: "tienda/ventaClientes/jugueteVender", component: JugueteSeleccionadoComponent },
   { path: "tienda/ventaClientes/jugueteVender/compraHecha", component: JugueteVendidoScreenComponent },
   { path: "tienda/ventaClientes", component: VentaAClientesComponent },
+  { path: "tienda/compraProveedores", component: CompraProveedoresComponent },
+  { path: "tienda/compraProveedores/comprar", component: JugueteAComprarComponent },
   { path: "juguet", loadChildren: () => import("./components/juguetes/juguetes.module").then(m => m.JuguetesModule) },
   { path: "client", loadChildren: () => import("./components/clientes/clientes.module").then(m => m.ClientesModule) },
   { path: "proveed", loadChildren: () => import("./components/proveedores/proveedores.module").then(m => m.ProveedoresModule) },
