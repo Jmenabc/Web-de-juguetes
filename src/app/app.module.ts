@@ -10,13 +10,21 @@ import { EntradaWebComponent } from './components/entrada-web/entrada-web.compon
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { DisplayMenuComponent } from './components/display-menu/display-menu.component';
 import { OpcionesCrudComponent } from './components/opciones-crud/opciones-crud.component';
+import { MenuTiendaComponent } from './components/Tienda/menu-tienda/menu-tienda.component';
+import { VentaAClientesComponent } from './components/Tienda/venta-a-clientes/venta-a-clientes.component';
+import { JugueteSeleccionadoComponent } from './components/Tienda/juguete-seleccionado/juguete-seleccionado.component';
+import { JugueteVendidoScreenComponent } from './components/Tienda/juguete-vendido-screen/juguete-vendido-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntradaWebComponent,
     DisplayMenuComponent,
-    OpcionesCrudComponent
+    OpcionesCrudComponent,
+    MenuTiendaComponent,
+    VentaAClientesComponent,
+    JugueteSeleccionadoComponent,
+    JugueteVendidoScreenComponent
   ],
   imports: [
     BrowserModule,
