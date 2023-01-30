@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-opciones-crud',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./opciones-crud.component.css']
 })
 export class OpcionesCrudComponent {
+
+  constructor(private _location: Location) { }
+
+  volverAtras() {
+    this._location.back();
+  }
 
 }

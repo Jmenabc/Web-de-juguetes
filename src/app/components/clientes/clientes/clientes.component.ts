@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-clientes',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ClientesComponent {
 
+  constructor(private _location: Location) { }
+
+  volverAtras() {
+    this._location.back();
+  }
 }
