@@ -12,7 +12,8 @@ import { ClientesRoutingModule } from './clientes-routing.module';
     ClientesComponent,
     AnadirClientesComponent,
     ListadoClientesComponent,
-    EditarClientesComponent
+    EditarClientesComponent,
+
   ],
   imports: [
     CommonModule,

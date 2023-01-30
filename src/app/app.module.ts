@@ -16,6 +16,7 @@ import { JugueteSeleccionadoComponent } from './components/Tienda/juguete-selecc
 import { JugueteVendidoScreenComponent } from './components/Tienda/juguete-vendido-screen/juguete-vendido-screen.component';
 import { CompraProveedoresComponent } from './components/Tienda/compra-proveedores/compra-proveedores.component';
 import { JugueteAComprarComponent } from './components/Tienda/juguete-a-comprar/juguete-a-comprar.component';
+import { BarraNavegacionComponent } from './components/barra-navegacion/barra-navegacion.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { JugueteAComprarComponent } from './components/Tienda/juguete-a-comprar/
     JugueteSeleccionadoComponent,
     JugueteVendidoScreenComponent,
     CompraProveedoresComponent,
-    JugueteAComprarComponent
+    JugueteAComprarComponent,
+    BarraNavegacionComponent
   ],
   imports: [
     BrowserModule,

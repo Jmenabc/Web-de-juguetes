@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AnadirProveedoresComponent,
     EditarProveedoresComponent,
     ListadoProveedoresComponent
+
   ],
   imports: [
     CommonModule,
